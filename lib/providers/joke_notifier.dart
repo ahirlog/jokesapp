@@ -3,18 +3,11 @@ import 'package:http/http.dart' as http;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:jokesapp/jokes_model.dart';
-import 'package:jokesapp/main.dart';
+import 'package:jokesapp/models/jokes_model.dart';
 
 class JokeNotifier extends StateNotifier<JokeState> {
   JokeNotifier() : super(JokeState()) {
-    _initHive();
     _fetchJokeFromCache();
-  }
-
-  Future<void> _initHive() async {
-    await Hive.initFlutter();
-    Hive.registerAdapter(JokeAdapter());
   }
 
   Future<void> fetchJoke() async {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:jokesapp/home_screen.dart';
+import 'package:jokesapp/screens/home_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:jokesapp/jokes_model.dart';
+import 'package:jokesapp/models/jokes_model.dart';
 import 'package:path_provider/path_provider.dart';
 
 void main() async {

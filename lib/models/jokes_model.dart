@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:jokesapp/joke_notifier.dart';
+import 'package:jokesapp/providers/joke_notifier.dart';
 
 final jokeProvider =
     StateNotifierProvider<JokeNotifier, JokeState>((ref) => JokeNotifier());
